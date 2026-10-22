@@ -24,7 +24,7 @@ def countdown(minutes: int, label: str) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="一个极简的命令行番茄钟")
     parser.add_argument("-w", "--work", type=int, default=25, help="专注时长（分钟），默认 25")
-    parser.add_argument("-b", "--break", type=int, default=5, help="休息时长（分钟），默认 5")
+    parser.add_argument("-b", "--break", dest="break_", type=int, default=5, help="休息时长（分钟），默认 5")
     parser.add_argument("-n", "--rounds", type=int, default=1, help="番茄轮数，默认 1")
     args = parser.parse_args()
 
